@@ -1,0 +1,364 @@
+html{
+    font-family: Vazir;
+}
+.adver{
+    width: 100%;
+}
+.list{
+    background-color: #b31313;
+    padding:5% ;
+    text-align: center;
+}
+.listkharid{
+    padding: 3%;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+.navbar {
+   overflow: hidden;/*in miyad rang ro okey mikone*/
+    background-color: #b31313;
+}
+.navbar1 {
+    overflow: hidden;/*in miyad rang ro okey mikone*/
+    background-color: #fbfcfc;
+}
+.navbar a {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 10% 10% 10% 10% ;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;/*in miyad khat zir ro delete*/
+    font-size: 17px;
+    font-weight: bold;
+    font-family: Vazir;
+
+}
+.rightnav a{
+    color: black;
+    float: right;
+    text-align: center;
+    padding: 14px 10px;
+    font-family: Vazir;
+
+    text-decoration: none;
+}
+
+.fa-home{
+   display: none;
+}
+.fa-envelope{
+    display: none;
+}
+.fa-pencil{
+    display: none;
+}
+.fa-user-circle{
+    display: none;
+}
+/*.fa-search .fa-caret-down{*/
+/*    display: flex;*/
+/*}*/
+
+.leftnav a{
+    float: left;
+    color: black;
+    padding: 14px 16px;
+    text-decoration: none;
+
+}
+.navbar1 button {
+    background-color: #f6f8f8;
+    border: #f8f6f7;
+    float: right;
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 2% 4.5%;
+    text-decoration: none;/*in miyad khat zir ro delete*/
+    font-size: 17px;
+    font-weight: bold;
+}
+.navbar a:hover {
+    background-color: #ec9999;
+    color: black;
+}
+.navbar1 button:hover {
+    background-color: #b31313;
+    color: black;
+}
+.navbar a.active {
+    background-color: #d73434;
+    color: #070000;
+}
+.searchBar {
+    display: flex;
+    background-color: #ad1515;
+    justify-content: center;
+    padding: 1%;
+}
+.searchBar input[type=text] {
+    padding: 1%;
+    padding-left:10% ;
+    padding-right: 10%;
+    font-size: large;
+    min-width: 40px;
+    font-family: Vazir;
+}
+
+.btn{
+    padding: 3%;
+    font-size: small;
+}
+
+.box0{
+    display: grid;
+    grid-template-columns: 50% 50% ;
+    background-color: brown;
+    color: #010d18;
+    font-size: larger;
+    padding: 2%;
+}
+
+.box1{
+    text-align: center;
+    margin: 3%;
+    background-color: #f8fafa;
+   /*// width: 130%;*/
+    padding: 4%;
+    grid-gap: 2%;
+
+}
+
+.box2{
+    display: grid;
+    grid-template-columns: 50% 50% ;
+    background-color: brown;
+    color: #000810;
+    font-size: larger;
+    padding: 2%;
+
+}
+h4{
+    background-color: #c6f853;
+    border-radius: 3%;
+    text-align: center;
+}
+.box3{
+    text-align: center;
+    margin: 3%;
+    background-color: #fcfdfd;
+    /*// width: 130%;*/
+    padding: 4%;
+    grid-gap: 2%;
+
+}
+.pic{
+    width: 70%;
+}
+/* Style items (options): */
+.selectBack{
+    background-color: #a00303;
+    width: 100%;
+    text-align: center;
+    padding: 3%;
+}
+.selectBack select{
+   float: left;
+    background-color: #710505;
+    padding: 3%;
+    color: #f6f8f8;
+    font-weight: bold;
+    font-size: larger;
+    font-family: Vazir;
+}
+.selectBack{
+    display: inline-block;
+}
+.inputfinally{
+    font-weight: bold;
+    font-family: Vazir;
+    font-size: medium;
+    padding: 1%;
+}
+.calc{
+    padding: 1%;
+    background-color: #6a0202;
+    color: #fdfdfd;
+    font-family: Vazir;
+    font-weight: bold;
+    font-size: large;
+}
+.content {
+    overflow: hidden;
+    outline: none;
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    width: 100%;
+    left: 0;
+    top: 30%;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+.dropdown:hover .content{
+    display: block;
+}
+.column {
+    float: right;
+    width: 13.33%;
+    padding: 4%;
+    padding-right:10% ;
+    padding-left: 10%;
+    /*background-color: #ccc;*/
+    height: 160px;
+}
+
+/* Style links inside the columns */
+.column a {
+    float: none;
+    color: black;
+    padding: 1%;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+/* Add a background color on hover */
+.column a:hover {
+    background-color: #ddd;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+.column1 p{
+    font-size: smaller;
+    font-weight: bold;
+}
+.add{
+    background-color: #a00303;
+    color: #f6f8f8;
+    padding: .5rem;
+    padding-right: 1rem;
+    padding-left: 1rem;
+    font-family: Vazir;
+    font-weight: bold;
+}
+@media (min-width: 600px){
+    .content{
+        top:32%;
+    }
+    .box0{
+        grid-template-columns: 33% 33% 33%;
+    }
+    .box2{
+        grid-template-columns: 33% 33% 33%;
+    }
+    /*.searchBar input[type=text] {*/
+    /*   padding: 1%;*/
+    /*    padding-left:8%;*/
+    /*    padding-right: 8%;*/
+    /*    font-size: small;*/
+
+    /*}*/
+}
+@media  (min-width:700px){
+
+    .navbar {
+        /*float: right;*/
+        display: block;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;/*in miyad khat zir ro delete*/
+        font-size: 17px;
+        font-weight: bold;
+    }
+    .content {
+        overflow: hidden;
+        outline: none;
+        display: none;
+        position: absolute;
+        background-color: #f9f9f9;
+        width: 100%;
+        left: 0;
+        top: 35%;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+    }
+    .leftnav a{
+        float: left;
+        color: black;
+        padding: 14px 16px;
+        font-family: 'Vazir';
+
+        text-decoration: none;
+
+    }
+    .navbar1 button {
+        background-color: #f6f8f8;
+        border: #f6f8f8;
+        float: right;
+        display: block;
+        color: black;
+        text-align: center;
+        padding: 1% 2.5%;
+        text-decoration: none;/*in miyad khat zir ro delete*/
+        font-size: 17px;
+        font-weight: bold;
+        font-family: 'Vazir';
+
+    }
+
+    .box0{
+        display: grid;
+        grid-template-columns: 20% 20% 20% 20% 20%  ;
+        background-color: brown;
+        color: #010d18;
+        font-size: larger;
+    }
+    .box1{
+        text-align: center;
+        margin: 3%;
+        background-color: #f8fafa;
+        /*// width: 130%;*/
+        padding: 4%;
+        grid-gap: 2%;
+
+    }
+    .box2{
+        display: grid;
+        grid-template-columns: 20% 20% 20% 20% 20%  ;
+        background-color: brown;
+        color: #000810;
+        font-size: larger;
+    }
+    .box3{
+        text-align: center;
+        margin: 3%;
+        background-color: #fcfdfd;
+        /*// width: 130%;*/
+        padding: 4%;
+        grid-gap: 2%;
+
+    }
+
+    input {
+        padding: 0;
+        padding-left:10%;
+        padding-right: 10%;
+        font-family: 'Vazir';
+    }
+
+    .btn{
+        padding: 2px;
+        padding-left: 14px;
+        padding-right: 14px;
+    }
+    /*.fa-pencil{*/
+    /*    display: inline-block;*/
+    /*}*/
+}
