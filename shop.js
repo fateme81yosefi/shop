@@ -2,20 +2,27 @@ function m() {
 
     var selectbox = parseInt(document.getElementById("selectboxx").value);
 
-    var m1 = parseInt(document.getElementById("mast").value) * 7200;
-    var m2 = parseInt(document.getElementById("milkpor").value) * 11250;
-    var m3 = parseInt(document.getElementById("milkkam").value) * 10800;
-    var m4 = parseInt(document.getElementById("khame").value )* 5650;
-    var m5 = parseInt(document.getElementById("kashk").value) * 7000;
-    var m6 = parseInt(document.getElementById("escrab").value )* 53200;
-    var m7 = parseInt(document.getElementById("tarmim").value) * 25300;
-    var m8 = parseInt(document.getElementById("abresan").value) * 25400;
-    var m9 = parseInt(document.getElementById("mammardane").value) * 27200;
-    var m10 = parseInt(document.getElementById("mamzanane").value) * 29600;
+    if (selectbox==""){
+        alert("لطفا نام شهر خود را انتخاب کنید.");
+        document.getElementById("selectboxx").focus();
+    }
+    else {
+        var m1 = parseInt(document.getElementById("mast").value) * 7200;
+        var m2 = parseInt(document.getElementById("milkpor").value) * 11250;
+        var m3 = parseInt(document.getElementById("milkkam").value) * 10800;
+        var m4 = parseInt(document.getElementById("khame").value )* 5650;
+        var m5 = parseInt(document.getElementById("kashk").value) * 7000;
+        var m6 = parseInt(document.getElementById("escrab").value )* 53200;
+        var m7 = parseInt(document.getElementById("tarmim").value) * 25300;
+        var m8 = parseInt(document.getElementById("abresan").value) * 25400;
+        var m9 = parseInt(document.getElementById("mammardane").value) * 27200;
+        var m10 = parseInt(document.getElementById("mamzanane").value) * 29600;
 
-    var sum = m1 + m2 + m3 + m4 + m5 + m6 + m7 + m8 + m9 + m10+selectbox;
-    document.getElementById("x").value=sum;
-    console.log(sum);
+        var sum = m1 + m2 + m3 + m4 + m5 + m6 + m7 + m8 + m9 + m10+selectbox;
+        document.getElementById("x").value=sum;
+        console.log(sum);
+    }
+
 }
 function t(i){
     if(i==1){
