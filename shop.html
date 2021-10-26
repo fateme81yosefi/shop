@@ -1,271 +1,161 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="rtl">
 <head>
-    <link rel="stylesheet" href="./fonts/vazir.css">
+    <link rel="stylesheet" href="./font/">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="shop.css">
+    <link rel="stylesheet" href="css/shop.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <meta charset="UTF-8">
     <title>online shop</title>
 </head>
 <body>
-<div class="navbar">
-    <div class="rightnav">
-        <a class="active" href="#"><i class="fa fa-home"></i>         صفحه اصلی                </a>
-        <a href="#"><i class="fa fa-envelope"></i>      درباره ما           </a>
-        <a href="#"><i class="fa fa-pencil"></i>        ارتباط با ما        </a>
-    </div>
-    <div class="leftnav">
-        <a href="#"><i class="fa fa-user-circle"></i> حساب کاربری </a>
-    </div>
+<div class="navbar position-fixed">
 
+    <nav class="navbar navbar-expand-lg navbar-light bg-light ">
+        <a class="col-1 navbar-brand" href="#"><img class="d-lg-flex d-none" src="https://static.cdnlogo.com/logos/d/43/digikala.svg"></a>
+<!--        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"-->
+<!--                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">-->
+<!--            <span class="navbar-toggler-icon"></span>-->
+        </button>
+        <div class="col-7 searchBar">
+            <form class="d-flex">
+                <input class="form-control me-2" type="search" placeholder="جستجو در ديجي كالا" aria-label="Search">
+                <button class="btn-search" type="submit" style="width:100px;"><i class="btn fa fa-search" style="font-size:100%"></i></button>
+            </form>
+        </div>
+
+        <div class="d-lg-flex d-none col-2 account"> <input type="text"  placeholder="حساب کاربری"></div>
+        <div class="col-1 line"></div>
+     <div class="col-1"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" style="float: left" fill="currentColor" class="bi bi-cart" viewBox="0 0 16 16">
+         <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+     </svg></div>
+    </nav>
+
+    <ul class="nav nav-tabs">
+        <li class="nav-item dropdown">
+            <a class="nav-link" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-justify" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M2 12.5a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5zm0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5zm0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5zm0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5z"/>
+            </svg> دسته بندي كالاها </a>
+            <div class="dropdown-menu">
+                <a class="dropdown-item" href="#">كالاي ديجيتال</a>
+                <a class="dropdown-item" href="#">خودرو ابزار و تجهيزات صنعتي</a>
+                <a class="dropdown-item" href="#">مد و پوشاك</a>
+                <a class="dropdown-item" href="#">اسباب بازي كودك و نوزاد</a>
+                <a class="dropdown-item" href="#">زيبايي و سلامت</a>
+                <a class="dropdown-item" href="#">خانه و اشپزخانه</a>
+                <a class="dropdown-item" href="#">ورزش و سفر</a>
+                <a class="dropdown-item" href="#">كتاب لوازم تحرير و هنر</a>
+                <a class="dropdown-item" href="#">كالاهاي سوپر ماركتي</a>
+            </div>
+        </li>
+        <li class="nav-item dropdown">
+            <a class="nav-link" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-basket" viewBox="0 0 16 16">
+                <path d="M5.757 1.071a.5.5 0 0 1 .172.686L3.383 6h9.234L10.07 1.757a.5.5 0 1 1 .858-.514L13.783 6H15a1 1 0 0 1 1 1v1a1 1 0 0 1-1 1v4.5a2.5 2.5 0 0 1-2.5 2.5h-9A2.5 2.5 0 0 1 1 13.5V9a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h1.217L5.07 1.243a.5.5 0 0 1 .686-.172zM2 9v4.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V9H2zM1 7v1h14V7H1zm3 3a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-1 0v-3A.5.5 0 0 1 4 10zm2 0a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-1 0v-3A.5.5 0 0 1 6 10zm2 0a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-1 0v-3A.5.5 0 0 1 8 10zm2 0a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-1 0v-3a.5.5 0 0 1 .5-.5zm2 0a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-1 0v-3a.5.5 0 0 1 .5-.5z"/>
+            </svg> سوپر ماركت </a>
+            <div class="dropdown-menu">
+                <a class="dropdown-item" href="#">محصولات پروتئيني</a>
+                <a class="dropdown-item" href="#">تنقلات</a>
+                <a class="dropdown-item" href="#">صبحانه</a>
+                <a class="dropdown-item" href="#">نوشيدني</a>
+                <a class="dropdown-item" href="#">خشكبار و شيريني</a>
+                <a class="dropdown-item" href="#">كالاهاي اساسي و خوار و بار</a>
+            </div>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-award" viewBox="0 0 16 16">
+                <path d="M9.669.864 8 0 6.331.864l-1.858.282-.842 1.68-1.337 1.32L2.6 6l-.306 1.854 1.337 1.32.842 1.68 1.858.282L8 12l1.669-.864 1.858-.282.842-1.68 1.337-1.32L13.4 6l.306-1.854-1.337-1.32-.842-1.68L9.669.864zm1.196 1.193.684 1.365 1.086 1.072L12.387 6l.248 1.506-1.086 1.072-.684 1.365-1.51.229L8 10.874l-1.355-.702-1.51-.229-.684-1.365-1.086-1.072L3.614 6l-.25-1.506 1.087-1.072.684-1.365 1.51-.229L8 1.126l1.356.702 1.509.229z"/>
+                <path d="M4 11.794V16l4-1 4 1v-4.206l-2.018.306L8 13.126 6.018 12.1 4 11.794z"/>
+            </svg> ديجي كالاي من </a>
+        </li>
+        <li class="nav-item dropdown">
+            <a class="nav-link" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-plus" viewBox="0 0 16 16">
+                <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
+            </svg>  ديجي پلاس </a>
+        </li>
+        <li class="nav-item dropdown">
+            <a class="nav-link" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-shop" viewBox="0 0 16 16">
+                <path d="M2.97 1.35A1 1 0 0 1 3.73 1h8.54a1 1 0 0 1 .76.35l2.609 3.044A1.5 1.5 0 0 1 16 5.37v.255a2.375 2.375 0 0 1-4.25 1.458A2.371 2.371 0 0 1 9.875 8 2.37 2.37 0 0 1 8 7.083 2.37 2.37 0 0 1 6.125 8a2.37 2.37 0 0 1-1.875-.917A2.375 2.375 0 0 1 0 5.625V5.37a1.5 1.5 0 0 1 .361-.976l2.61-3.045zm1.78 4.275a1.375 1.375 0 0 0 2.75 0 .5.5 0 0 1 1 0 1.375 1.375 0 0 0 2.75 0 .5.5 0 0 1 1 0 1.375 1.375 0 1 0 2.75 0V5.37a.5.5 0 0 0-.12-.325L12.27 2H3.73L1.12 5.045A.5.5 0 0 0 1 5.37v.255a1.375 1.375 0 0 0 2.75 0 .5.5 0 0 1 1 0zM1.5 8.5A.5.5 0 0 1 2 9v6h1v-5a1 1 0 0 1 1-1h3a1 1 0 0 1 1 1v5h6V9a.5.5 0 0 1 1 0v6h.5a.5.5 0 0 1 0 1H.5a.5.5 0 0 1 0-1H1V9a.5.5 0 0 1 .5-.5zM4 15h3v-5H4v5zm5-5a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1v-3zm3 0h-2v3h2v-3z"/>
+            </svg> ديجي كلاب </a>
+        </li>
+        <li class="nav-item dropdown">
+            <a class="nav-link" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-slack" viewBox="0 0 16 16">
+                <path d="M3.362 10.11c0 .926-.756 1.681-1.681 1.681S0 11.036 0 10.111C0 9.186.756 8.43 1.68 8.43h1.682v1.68zm.846 0c0-.924.756-1.68 1.681-1.68s1.681.756 1.681 1.68v4.21c0 .924-.756 1.68-1.68 1.68a1.685 1.685 0 0 1-1.682-1.68v-4.21zM5.89 3.362c-.926 0-1.682-.756-1.682-1.681S4.964 0 5.89 0s1.68.756 1.68 1.68v1.682H5.89zm0 .846c.924 0 1.68.756 1.68 1.681S6.814 7.57 5.89 7.57H1.68C.757 7.57 0 6.814 0 5.89c0-.926.756-1.682 1.68-1.682h4.21zm6.749 1.682c0-.926.755-1.682 1.68-1.682.925 0 1.681.756 1.681 1.681s-.756 1.681-1.68 1.681h-1.681V5.89zm-.848 0c0 .924-.755 1.68-1.68 1.68A1.685 1.685 0 0 1 8.43 5.89V1.68C8.43.757 9.186 0 10.11 0c.926 0 1.681.756 1.681 1.68v4.21zm-1.681 6.748c.926 0 1.682.756 1.682 1.681S11.036 16 10.11 16s-1.681-.756-1.681-1.68v-1.682h1.68zm0-.847c-.924 0-1.68-.755-1.68-1.68 0-.925.756-1.681 1.68-1.681h4.21c.924 0 1.68.756 1.68 1.68 0 .926-.756 1.681-1.68 1.681h-4.21z"/>
+            </svg> ديجي پي </a>
+        </li>
+        <li class="nav-item dropdown">
+            <a class="nav-link" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-question-circle" viewBox="0 0 16 16">
+                <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                <path d="M5.255 5.786a.237.237 0 0 0 .241.247h.825c.138 0 .248-.113.266-.25.09-.656.54-1.134 1.342-1.134.686 0 1.314.343 1.314 1.168 0 .635-.374.927-.965 1.371-.673.489-1.206 1.06-1.168 1.987l.003.217a.25.25 0 0 0 .25.246h.811a.25.25 0 0 0 .25-.25v-.105c0-.718.273-.927 1.01-1.486.609-.463 1.244-.977 1.244-2.056 0-1.511-1.276-2.241-2.673-2.241-1.267 0-2.655.59-2.75 2.286zm1.557 5.763c0 .533.425.927 1.01.927.609 0 1.028-.394 1.028-.927 0-.552-.42-.94-1.029-.94-.584 0-1.009.388-1.009.94z"/>
+            </svg> سوالي داريد؟ </a>
+        </li>
+        <li class="nav-item dropdown">
+            <a class="nav-link" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-bag" viewBox="0 0 16 16">
+                <path d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1zm3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4h-3.5zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V5z"/>
+            </svg> فروشنده شويد </a>
+        </li>
+    </ul>
 </div>
-<div class="searchBar">
-    <input type="text" placeholder="محصول مورد نظر را وارد کنید">
-    <button type="submit"><i class="btn fa fa-search"></i></button>
-</div>
+<br><br><br><br><br><br><br><br>
 
-
-<div class="navbar1">
-    <div class="dropdown">
-        <button> مواد غذایی <i class="fa fa-caret-down"></i></button>
-        <div class="content">
-            <div class="row">
-                <div class="column">
-                    <h3>لبنیات</h3>
-                    <a href="#">بستنی</a>
-                    <a href="#">کره</a>
-                    <a href="#">کشک</a>
-                    <a href="#">شیر</a>
-                    <a href="#">خامه</a>
-                </div>
-                <div class="column">
-
-                    <h3>پروتینی</h3>
-
-                    <a href="#">گوشت ماهی</a>
-                    <a href="#"> گوشت گوسفند</a>
-                    <a href="#">گوشت گوساله</a>
-                    <a href="#">گوشت پرندگان</a>
-
-
-
-                </div>
-                <div class="column">
-                    <h3>آجیل وخشکبار</h3>
-                    <a href="#">خرما</a>
-                    <a href="#">آجیل مخلوط</a>
-                    <a href="#">انجیر</a>
-                    <a href="#">بادام</a>
-                    <a href="#">پسته</a>
-                    <a href="#"> بادام هندی</a>
-
-
-                </div>
-                <div class="column">
-                    <h3>غذا آماده و کنسرو جات</h3>
-                    <a href="#">کنسرو مایه ماکارونی</a>
-                    <a href="#">کنسروعدسی</a>
-                    <a href="#">کنسرو لوبیاچیتی</a>
-                    <a href="#">تن ماهی</a>
-                    <a href="#">کنسرو قورمه سبزی</a>
-                </div>
-                <div class="column">
-                    <h3>شیرینی و تنقلات</h3>
-                    <a href="#">شکلات</a>
-                    <a href="#">پشمک</a>
-                    <a href="#">پفک</a>
-                    <a href="#">ژله</a>
-                    <a href="#">پولکی</a>
-
-                </div>
-                <div class="column">
-                    <h3>چاشنی و ادویه جات</h3>
-                    <a href="#">سس هزارجزیره</a>
-                    <a href="#">سس مایونز</a>
-                    <a href="#">سس سالسا</a>
-                    <a href="#">سس خردل</a>
-                    <a href="#">سس کچاپ</a>
-
-                </div>
-
-
-            </div>
-        </div>
-    </div>
-    <div class="dropdown">
-        <button> نوشیدنی و دمنوش ها <i class="fa fa-caret-down"></i></button>
-        <div class="content">
-            <div class="row">
-                <div class="column">
-                    <h4>نوشیدنی گرم</h4>
-                    <a href="#">کافی میت</a>
-                    <a href="#">قهوه</a>
-                    <a href="#">هات چاکلت</a>
-                    <a href="#">کافی میکس</a>
-
-
-                </div>
-                <div class="column">
-                    <h4>چای و دمنوش</h4>
-                    <a href="#">چای سبز</a>
-                    <a href="#">چای ماسالا</a>
-                    <a href="#">چای سیاه</a>
-                    <a href="#">دمنوش</a>
-
-                </div>
-
-            </div>
-        </div>
-    </div>
-    <div class="dropdown">
-        <button> خواربار <i class="fa fa-caret-down"></i></button>
-        <div class="content">
-            <div class="row">
-                <div class="column">
-                    <h4>حبوبات</h4>
-                    <a href="#">نخود</a>
-                    <a href="#">لوبیا</a>
-                    <a href="#">عدس</a>
-                    <a href="#">ماش</a>
-                </div>
-                <div class="column">
-                    <h4>غلات</h4>
-
-                    <a href="#">گندم</a>
-                    <a href="#">جو</a>
-                    <a href="#">برنج</a>
-                    <a href="#"> برنج قهوه ای</a>
-
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="dropdown">
-        <button> میوه و سبزیجات <i class="fa fa-caret-down"></i></button>
-        <div class="content">
-            <div class="row">
-                <div class="column">
-                    <h4>میوه</h4>
-
-                    <a href="#">موز</a>
-                    <a href="#">سیب</a>
-                    <a href="#">هلو</a>
-                    <a href="#">شلیل</a>
-                    <a href="#">الو</a>
-
-                </div>
-                <div class="column">
-                    <h4>سبزی</h4>
-
-                    <a href="#">کرفس</a>
-                    <a href="#">کدو</a>
-                    <a href="#">بادنجان</a>
-                    <a href="#">تره</a>
-                    <a href="#">شوید</a>
-
-                </div>
-
-            </div>
-        </div>
-    </div>
-    <div class="dropdown">
-        <button> لوازم التحریر و اداری <i class="fa fa-caret-down"></i></button>
-        <div class="content">
-            <div class="row">
-                <div class="column">
-                    <a href="#">کیف</a>
-                    <a href="#">مداد</a>
-                    <a href="#">اتود</a>
-                </div>
-                <div class="column">
-                    <a href="#">تراش</a>
-                    <a href="#">پاک کن</a>
-                    <a href="#">دفتر</a>
-                </div>
-                <div class="column">
-                    <a href="#">جامدادی</a>
-                    <a href="#">ماژیک</a>
-                    <a href="#">خودکار</a>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="dropdown">
-        <button> پوشاک <i class="fa fa-caret-down"></i></button>
-        <div class="content">
-            <div class="row">
-                <div class="column">
-                    <a href="#">شلوار</a>
-                    <a href="#">بلوز مردانه</a>
-                    <a href="#">مانتو</a>
-                </div>
-                <div class="column">
-                    <a href="#">شال </a>
-                    <a href="#">روسری</a>
-                    <a href="#">کلاه</a>
-                </div>
-                <div class="column">
-                    <a href="#">شلوارک</a>
-                    <a href="#">تیشرت</a>
-                    <a href="#">ساحلی</a>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<div>
-    <div><img class="adver" src="https://ads.khanoumi.com/storage/637665245716200506.jpg"></div>
+    <div><img class="adver adver-top" src="https://dkstatics-public.digikala.com/digikala-adservice-banners/a4f2860ee5cce26c2d461e57e4d611f3eaba0667_1634735680.jpg?x-oss-process=image/quality,q_80"></div>
     <div><img class="adver" src="https://ads.khanoumi.com/storage/637666134188364516.jpg"></div>
 
-</div>
-<div class="b1">
-    <div class="b2"><img class="pic1" src="https://dkstatics-public.digikala.com/digikala-adservice-banners/572e540ccfd35e7cb49d656a39426b57fa3fba25_1630576142.jpg?x-oss-process=image/quality,q_80">
-    </div>
-    <div class="b2"><img class="pic1" src="https://dkstatics-public.digikala.com/digikala-adservice-banners/0d4c25985d86bd4811faafd84269d7e74939d2ff_1630658156.jpg?x-oss-process=image/quality,q_80">
-    </div>
 
+<div class="adver-2">
+    <div class="adver-sm"><img class="pic1" src="https://dkstatics-public.digikala.com/digikala-adservice-banners/572e540ccfd35e7cb49d656a39426b57fa3fba25_1630576142.jpg?x-oss-process=image/quality,q_80">
     </div>
-
-</div>
-<div class="box0">
-    <div class="box1"><img class="pic" src="https://cdn.okala.com/media/index/Product/287986/210/210"><br> ماست موسیر 250 گرمی رامک<br><h4 >7,200</h4><h5>تومان</h5><input id="mast" type="number" min="0" value="0" max="9"><br><button  onclick="t(1)" id="m1" class="add" type="button">افزودن به سبد خرید</button>
+    <div class="adver-sm"><img class="pic1" src="https://dkstatics-public.digikala.com/digikala-adservice-banners/0d4c25985d86bd4811faafd84269d7e74939d2ff_1630658156.jpg?x-oss-process=image/quality,q_80">
     </div>
-    <div class="box1"><img class="pic" src="https://cdn.okala.com/media/index/Product/287896/210/210"><br>شیر پرچرب 1 لیتری رامک<br><h4 >11,250</h4><h5>تومان</h5><input id="milkpor" type="number" value="0" min="0" max="9"><br><button onclick="t(2)" id="m2" class="add" type="button">افزودن به سبد خرید</button>
-    </div>
-    <div class="box1"><img class="pic" src="https://cdn.okala.com/media/index/Product/287904/210/210"><br>شیر کم چرب 1 لیتری رامک<br><h4 >10,800</h4><h5>تومان</h5><input id="milkkam" type="number" value="0"  min="0" max="9"><br><button onclick="t(3)" id="m3" class="add" type="button">افزودن به سبد خرید</button>
-    </div>
-    <div class="box1"><img class="pic" src="https://cdn.okala.com/media/index/Product/201220/210/210"><br>خامه شکلاتی 100گرمی رامک<br><h4>5,650</h4><h5>تومان</h5><input  id="khame" type="number" value="0" min="0" max="9"><br><button onclick="t(4)" id="m4" class="add" type="button">افزودن به سبد خرید</button>
-    </div>
-    <div class="box1"><img class="pic" src="https://cdn.okala.com/media/index/Product/383019/210/210"><br>کشک 250گرمی رامک<br><h4>7,000</h4><h5>تومان</h5><input id="kashk" type="number" value="0" min="0" max="9"><br><button onclick="t(5)" id="m5" class="add" type="button">افزودن به سبد خرید</button>
     </div>
 
 </div>
+<div class="container"><h3>محصولات لبني :</h3><hr><br>
+    <div class="box0">
+
+        <div class="box1"><img class="pic" src="https://cdn.okala.com/media/index/Product/287986/210/210"><br> ماست موسیر 250 گرمی رامک<br><h4 >7,200</h4><h5>تومان</h5><input id="mast" type="number" min="0" value="0" max="9"><br><button  onclick="t(1)" id="m1" class="add" type="button">افزودن به سبد خرید</button>
+        </div>
+        <div class="box1"><img class="pic" src="https://cdn.okala.com/media/index/Product/287896/210/210"><br>شیر پرچرب 1 لیتری رامک<br><h4 >11,250</h4><h5>تومان</h5><input id="milkpor" type="number" value="0" min="0" max="9"><br><button onclick="t(2)" id="m2" class="add" type="button">افزودن به سبد خرید</button>
+        </div>
+        <div class="box1"><img class="pic" src="https://cdn.okala.com/media/index/Product/287904/210/210"><br>شیر کم چرب 1 لیتری رامک<br><h4 >10,800</h4><h5>تومان</h5><input id="milkkam" type="number" value="0"  min="0" max="9"><br><button onclick="t(3)" id="m3" class="add" type="button">افزودن به سبد خرید</button>
+        </div>
+        <div class="box1"><img class="pic" src="https://cdn.okala.com/media/index/Product/201220/210/210"><br>خامه شکلاتی 100گرمی رامک<br><h4>5,650</h4><h5>تومان</h5><input  id="khame" type="number" value="0" min="0" max="9"><br><button onclick="t(4)" id="m4" class="add" type="button">افزودن به سبد خرید</button>
+        </div>
+        <div class="box1"><img class="pic" src="https://cdn.okala.com/media/index/Product/383019/210/210"><br>کشک 250گرمی رامک<br><h4>7,000</h4><h5>تومان</h5><input id="kashk" type="number" value="0" min="0" max="9"><br><button onclick="t(5)" id="m5" class="add" type="button">افزودن به سبد خرید</button>
+        </div>
+
+    </div>
+</div>
+
 <hr><hr>
-<div class="box2">
-    <!--    <div class="takhfifPIC"><img src="https://www.digikala.com/static/files/63494995.png"></div>-->
-    <div class="box3"><img class="pic"
-                           src="https://storage.khanoumi.com/ProductThumbnailImages/schon-deep-cleansing-scrub-khanoumi-202187124519799.jpg"><br>اسکراب صورت گردو شون<br><h4 >53,200</h4><h5>تومان</h5><br><input id="escrab" type="number" value="0" min="0" max="9"><br><button onclick="t(6)" id="m6" class="add" type="button">افزودن به سبد خرید</button>
-    </div>
-    <div class="box3"><img class="pic"
-                           src="https://storage.khanoumi.com/ProductThumbnailImages/%D8%B4%D8%A7%D9%85%D9%BE%D9%88-%DA%A9%D8%B1%D8%A7%D8%AA%DB%8C%D9%86-400-201716111411986.jpg"><br>...شامپو ترمیم کننده کراتین و جینسینگ شون<br><h4>25,300</h4><h5>تومان</h5><input  id="tarmim" value="0" type="number" min="0" max="9"><br><button onclick="t(7)" id="m7" class="add" type="button">افزودن به سبد خرید</button>
-    </div>
-    <div class="box3"><img class="pic"
-                           src="https://storage.khanoumi.com/ProductThumbnailImages/%DA%A9%D8%B1%D9%85-%D8%A2%D9%84%D9%88%D8%A6%D9%87-%D9%88%D8%B1%D8%A7-201711014725411.jpg"><br>
-        کرم آبرسان آلوئه ورا 50میل شون<br><h4 >25,400</h4><h5>تومان</h5><input id="abresan" value="0" type="number" min="0" max="9"><br><button onclick="t(8)" id="m8" class="add" type="button">افزودن به سبد خرید</button>
-    </div>
-    <div class="box3"><img class="pic"
-                           src="https://storage.khanoumi.com/ProductThumbnailImages/%D8%A8%D9%84%DA%A9-201716192554530.jpg"><br>دئودورانت رولی مردانه بلک شون<br><h4>27,200</h4><h5>تومان</h5><input  id="mammardane" value="0" type="number" min="0" max="9"><br><button onclick="t(9)" id="m9" class="add" type="button">افزودن به سبد خرید</button>
-    </div>
-    <div class="box3"><img class="pic" src="https://cdn.okala.com/media/index/Product/287986/210/210"><br>دئودورانت رولی زنانه فلاور شون<br><h4>29,600</h4><h5>تومان</h5><input  id="mamzanane" value="0" type="number" min="0" max="9"><br><button onclick="t(10)" id="m10" class="add" type="button">افزودن به سبد خرید</button>
+<div class="container"><h3>محصولات بهداشتي :</h3><hr><br>
+    <div class="box2">
+        <div class="box3"><img class="pic"
+                               src="https://storage.khanoumi.com/ProductThumbnailImages/schon-deep-cleansing-scrub-khanoumi-202187124519799.jpg"><br>اسکراب صورت گردو شون<br><h4 >53,200</h4><h5>تومان</h5><br><input id="escrab" type="number" value="0" min="0" max="9"><br><button onclick="t(6)" id="m6" class="add" type="button">افزودن به سبد خرید</button>
+        </div>
+        <div class="box3"><img class="pic"
+                               src="https://storage.khanoumi.com/ProductThumbnailImages/%D8%B4%D8%A7%D9%85%D9%BE%D9%88-%DA%A9%D8%B1%D8%A7%D8%AA%DB%8C%D9%86-400-201716111411986.jpg"><br>...شامپو ترمیم کننده کراتین و جینسینگ شون<br><h4>25,300</h4><h5>تومان</h5><input  id="tarmim" value="0" type="number" min="0" max="9"><br><button onclick="t(7)" id="m7" class="add" type="button">افزودن به سبد خرید</button>
+        </div>
+        <div class="box3"><img class="pic"
+                               src="https://storage.khanoumi.com/ProductThumbnailImages/%DA%A9%D8%B1%D9%85-%D8%A2%D9%84%D9%88%D8%A6%D9%87-%D9%88%D8%B1%D8%A7-201711014725411.jpg"><br>
+            کرم آبرسان آلوئه ورا 50میل شون<br><h4 >25,400</h4><h5>تومان</h5><input id="abresan" value="0" type="number" min="0" max="9"><br><button onclick="t(8)" id="m8" class="add" type="button">افزودن به سبد خرید</button>
+        </div>
+        <div class="box3"><img class="pic"
+                               src="https://storage.khanoumi.com/ProductThumbnailImages/%D8%A8%D9%84%DA%A9-201716192554530.jpg"><br>دئودورانت رولی مردانه بلک شون<br><h4>27,200</h4><h5>تومان</h5><input  id="mammardane" value="0" type="number" min="0" max="9" style="width: 40%; font-size: smaller;height: 10%"><br><button onclick="t(9)" id="m9" class="add" type="button">افزودن به سبد خرید</button>
+        </div>
+        <div class="box3"><img class="pic" src="https://cdn.okala.com/media/index/Product/287986/210/210"><br>دئودورانت رولی زنانه فلاور شون<br><h4>29,600</h4><h5>تومان</h5><input  id="mamzanane" value="0" type="number" min="0" max="9"><br><button onclick="t(10)" id="m10" class="add" type="button">افزودن به سبد خرید</button>
+        </div>
     </div>
 </div>
-<div class="list">
-    <p style="text-align: center;font-weight: bold;">:لیست خرید</p>
+<br>
+<div class="container list">
+    <p style="text-align: center;font-weight: bold;">لیست خرید:</p>
     <textarea class="listkharid" id="listt"></textarea>
 </div>
 <div class="selectBack">
-    <div class="custom-select" style="width:200px;">
+    <div>
         <select id="selectboxx">
             <option value="0">انتخاب شهر</option>
             <option value="600">مشهد(600تومان)</option>
@@ -276,10 +166,9 @@
             <option value="4000">یزد(4000تومان)</option>
             <option value="8000">بقیه شهر ها(8000تومان)</option>
         </select></div>
-
-    <button type="button" class="calc" onclick="m()">محاسبه قیمت نهایی</button>
     <input class="inputfinally" id="x" type="text" placeholder="0.0 تومان">
+    <button type="button" class="calc" onclick="m()">محاسبه قیمت نهایی</button>
 </div>
-<script src="shop.js"></script>
+<script src="js/shop.js"></script>
 </body>
 </html>
